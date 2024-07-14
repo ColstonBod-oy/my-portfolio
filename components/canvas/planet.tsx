@@ -9,7 +9,7 @@ const Planet = () => {
   const planet = useGLTF('./planet/scene.gltf');
 
   useEffect(() => {
-    const light = new THREE.HemisphereLight(0x8a7ab7, 0x946263, 15);
+    const light = new THREE.HemisphereLight(0x8a7ab7, 0x946263, 14);
     planet.scene.add(light);
 
     // Clean up function to remove the light when component unmounts or changes
