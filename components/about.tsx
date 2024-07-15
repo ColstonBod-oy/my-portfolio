@@ -31,17 +31,16 @@ export default function About() {
       </div>
       <SectionHeading>About me</SectionHeading>
       <p className='mb-3'>
-        I am currently in my third year of taking my BS in Computer Science
-        course. My journey as a developer began at a very young age during my
-        1st year of junior high school when we were taught to write simple
-        scripts using <span className='font-medium'>Visual Basic</span>.{' '}
+        I am currently in my third year of studying Computer Science. My journey
+        as a developer began at a very young age, during my first year of junior
+        high school, where I learned to write simple scripts using{' '}
+        <span className='font-medium'>Visual Basic</span>.{' '}
         <span className='italic'>In my senior years of high school</span>, I
         started taking programming seriously and became a self-taught Web
         Developer.
-        <br />I also dabbled in Game Development, but eventually, I discovered{' '}
-        <span className='underline'>Mobile Development</span>, which became the
-        area I am most passionate about. I am proficient with technologies such
-        as{' '}
+        <br />I also tried Game Development, but eventually, I discovered{' '}
+        <span className='underline'>Mobile Development</span>, which became my
+        primary area of interest. I am proficient with technologies such as{' '}
         <span className='font-medium'>
           React, Next.js, React Native, Expo, Firebase, PHP, and Laravel
         </span>

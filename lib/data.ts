@@ -39,7 +39,7 @@ export const experiencesData = [
     title: 'Freelance Web Developer (Remote)',
     location: 'Baguio, PH',
     description:
-      'Did freelance work and implemented a mobile-first responsive design of a website using React, React-Bootstrap, and Parcel Bundler, while using Netlify for deployment.',
+      'I did freelance work and implemented a mobile-first, responsive design for a website using React, React-Bootstrap, and Parcel Bundler, while using Netlify for deployment.',
     icon: React.createElement(FaReact),
     date: '2020 - 2021',
   },
@@ -47,7 +47,7 @@ export const experiencesData = [
     title: 'Web / Mobile Dev Intern (Remote)',
     location: 'Makati, PH',
     description:
-      'I worked as an intern for a startup e-commerce company that utilized CS-Cart for its development. My role included being a web developer for the CTA of our online marketplace and launching the Android and iOS app on the app stores.',
+      'I worked as an intern for a startup e-commerce company that utilized CS-Cart for its development. My role involved being a web developer for the CTA of our online marketplace and launching our mobile app on the Android and iOS app stores.',
     icon: React.createElement(FaPhp),
     date: '2021 - 2022',
   },
@@ -55,7 +55,7 @@ export const experiencesData = [
     title: 'Android Mobile Developer (Part Time)',
     location: 'Baguio, PH',
     description:
-      "I am currently a part-time CTO, utilizing Mapbox APIs and SDKs to develop a mobile navigation app for one of the tech startups in our university's incubator program. I am open to full-time opportunities.",
+      "I am currently working part-time as a CTO for one of the startups in our university's incubator program, where I use Mapbox APIs to develop a mobile navigation app. I am open to full-time opportunities.",
     icon: React.createElement(FaAndroid),
     date: '2023 - present',
   },
@@ -90,7 +90,7 @@ export const projectsData = [
   {
     title: 'HackforGov 2024',
     description:
-      'I participated in HackforGov 2024, my first CTF challenge, where our team placed as 3rd runner-up. The format of the challenge was Jeopardy-style.',
+      'I participated in HackforGov 2024, my first CTF challenge, where our team finished as the 3rd runner-up. The challenge was in Jeopardy-style format.',
     tags: ['Web Exploitation', 'NetSec', 'Cryptography', 'Forensics'],
     imageUrl: ctfImg,
     linkUrl:
