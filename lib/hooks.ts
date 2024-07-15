@@ -3,19 +3,9 @@ import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import type { SectionName } from './types';
 
-interface UseSectionInViewOptions {
-  triggerOnce?: boolean;
-}
-
-export function useSectionInView(
-  sectionName: SectionName,
-  threshold = 0.75,
-  options: UseSectionInViewOptions = {} // Provide default empty object to avoid undefined errors
-) {
-  const { triggerOnce = false } = options;
+export function useSectionInView(sectionName: SectionName, threshold = 0.75) {
   const { ref, inView } = useInView({
     threshold,
-    triggerOnce,
   });
   const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 

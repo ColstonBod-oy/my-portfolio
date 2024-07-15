@@ -12,9 +12,7 @@ import { useSectionInView } from '@/lib/hooks';
 import { useTheme } from '@/context/theme-context';
 
 export default function Experience() {
-  const { ref, inView } = useSectionInView('Experience', 0.2, {
-    triggerOnce: true,
-  });
+  const { ref, inView } = useSectionInView('Experience', 0.3);
   const { theme } = useTheme();
 
   return (

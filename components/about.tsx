@@ -7,7 +7,7 @@ import { useSectionInView } from '@/lib/hooks';
 import Image from 'next/image';
 
 export default function About() {
-  const { ref } = useSectionInView('About');
+  const { ref } = useSectionInView('About', 0.4);
 
   return (
     <motion.section

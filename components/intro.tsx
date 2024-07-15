@@ -10,7 +10,7 @@ import { HiDownload } from 'react-icons/hi';
 import PlanetCanvas from './canvas/planet';
 
 export default function Intro() {
-  const { ref } = useSectionInView('Home', 0.5);
+  const { ref } = useSectionInView('Home');
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
@@ -58,27 +58,27 @@ export default function Intro() {
       >
         <Link
           href='#contact'
-          className='group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:bg-gray-950'
+          className='flex items-center gap-2 py-3 text-white transition bg-gray-900 rounded-full outline-none group px-7 hover:bg-gray-950'
           onClick={() => {
             setActiveSection('Contact');
             setTimeOfLastClick(Date.now());
           }}
         >
           Contact me here{' '}
-          <BsArrowRight className='opacity-70 transition group-hover:translate-x-1' />
+          <BsArrowRight className='transition opacity-70 group-hover:translate-x-1' />
         </Link>
 
         <a
-          className='borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/5'
+          className='flex items-center gap-2 py-3 transition bg-white rounded-full outline-none cursor-pointer borderBlack group px-7 hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/5'
           href='/CV.pdf'
           download
         >
           Download CV{' '}
-          <HiDownload className='opacity-60 transition group-hover:translate-y-1' />
+          <HiDownload className='transition opacity-60 group-hover:translate-y-1' />
         </a>
 
         <a
-          className='borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-gray-700 transition hover:text-gray-950 dark:bg-white/10 dark:text-white/60 dark:hover:text-white/90'
+          className='flex items-center gap-2 p-4 text-gray-700 transition bg-white rounded-full cursor-pointer borderBlack hover:text-gray-950 dark:bg-white/10 dark:text-white/60 dark:hover:text-white/90'
           href='https://www.linkedin.com/in/colston-bod-oy-60a7521a4/'
           target='_blank'
         >

@@ -9,14 +9,20 @@ const Planet = () => {
   const planet = useGLTF('./planet/scene.gltf');
 
   useEffect(() => {
-    const light = new THREE.HemisphereLight(0x8a7ab7, 0x946263, 14);
-    planet.scene.add(light);
+    const ambientLight = new THREE.AmbientLight(0xcccccc, 1);
+    const directionalLight = new THREE.DirectionalLight(0x8f6e8d, 20);
 
-    // Clean up function to remove the light when component unmounts or changes
+    // Set to top left
+    directionalLight.position.set(-10, 10, 10);
+
+    planet.scene.add(ambientLight);
+    planet.scene.add(directionalLight);
+
     return () => {
-      planet.scene.remove(light);
+      planet.scene.remove(ambientLight);
+      planet.scene.remove(directionalLight);
     };
-  }, [planet.scene]); // Only run this effect when planet.scene changes
+  }, [planet.scene]);
 
   return (
     <primitive
