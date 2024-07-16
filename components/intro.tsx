@@ -70,10 +70,10 @@ export default function Intro() {
 
         <a
           className='flex items-center gap-2 py-3 transition bg-white rounded-full outline-none cursor-pointer borderBlack group px-7 hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/5'
-          href='/CV.pdf'
+          href='/Resume Colston Bod-oy.pdf'
           download
         >
-          Download CV{' '}
+          Download Resume{' '}
           <HiDownload className='transition opacity-60 group-hover:translate-y-1' />
         </a>
 
