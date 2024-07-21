@@ -88,9 +88,9 @@ export const projectsData = [
     linkUrl: 'https://github.com/ColstonBod-oy/helpmate',
   },
   {
-    title: 'HackforGov 2024',
+    title: 'Hack4Gov 2024',
     description:
-      'I participated in HackforGov 2024, my first CTF challenge, where our team finished as the 3rd runner-up. The challenge was in Jeopardy-style format.',
+      'I participated in Hack4Gov 2024, my first CTF challenge, where our team finished as the 3rd runner-up. The challenge was in Jeopardy-style format.',
     tags: ['Web Exploitation', 'NetSec', 'Cryptography', 'Forensics'],
     imageUrl: ctfImg,
     linkUrl:
