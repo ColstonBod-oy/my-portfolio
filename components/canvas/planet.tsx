@@ -9,8 +9,8 @@ const Planet = () => {
   const planet = useGLTF('./planet/scene.gltf');
 
   useEffect(() => {
-    const ambientLight = new THREE.AmbientLight(0xcccccc, 1);
-    const directionalLight = new THREE.DirectionalLight(0x8f6e8d, 20);
+    const ambientLight = new THREE.AmbientLight(0xcccccc, 0.5);
+    const directionalLight = new THREE.DirectionalLight(0x8f6e8d, 18);
 
     // Set to top left
     directionalLight.position.set(-10, 10, 10);
