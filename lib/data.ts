@@ -52,7 +52,7 @@ export const experiencesData = [
     date: '2021 - 2022',
   },
   {
-    title: 'Android Mobile Developer (Part Time)',
+    title: 'Android Mobile Developer (Part-time)',
     location: 'Baguio, PH',
     description:
       "I am currently working part-time as a CTO for one of the startups in our university's incubator program, where I use Mapbox APIs to develop a mobile navigation app. I am open to full-time opportunities.",

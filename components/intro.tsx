@@ -27,7 +27,7 @@ export default function Intro() {
             type: 'tween',
             duration: 0.2,
           }}
-          className='h-[60vh] w-full'
+          className='h-[60vh] w-[100vw]'
           style={{
             display: 'flex',
             justifyContent: 'center',

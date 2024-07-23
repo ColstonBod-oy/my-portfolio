@@ -30,7 +30,7 @@ export default function About() {
         />
       </div>
       <SectionHeading>About me</SectionHeading>
-      <p className='indent-8'>
+      <p className='text-justify indent-8'>
         Hello, I'm Colston. <span className='italic'>A Student</span> 📖 /{' '}
         <span className='underline'>React & Android Developer 💻</span>. I am
         currently in my third year of studying Computer Science. My journey as a
@@ -42,7 +42,7 @@ export default function About() {
         Developer.
       </p>
 
-      <p className='mb-3 indent-8'>
+      <p className='mb-3 text-justify indent-8'>
         I also tried Game Development, but eventually, I discovered{' '}
         <span className='underline'>Mobile Development</span>, which became my
         primary area of interest. I am proficient with technologies such as{' '}
@@ -54,7 +54,7 @@ export default function About() {
         as a Web or Mobile Developer.
       </p>
 
-      <p className='text-center'>
+      <p className='text-justify indent-8'>
         <span className='italic'>When I'm not coding</span>, I enjoy playing
         video games, watching movies, and going out for long walks. I also enjoy{' '}
         <span className='font-medium'>learning new things</span>. I am currently
