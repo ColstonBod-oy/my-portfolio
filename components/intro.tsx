@@ -20,22 +20,14 @@ export default function Intro() {
       className='mb-28 max-w-[50rem] scroll-mt-[100rem] text-center sm:mb-0'
     >
       <div className='flex items-center justify-center'>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            type: 'tween',
-            duration: 0.2,
-          }}
-          className='h-[60vh] w-[100vw]'
+        <div
           style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
+            width: '100vw',
+            height: '60vh',
           }}
         >
           <PlanetCanvas />
-        </motion.div>
+        </div>
       </div>
 
       <motion.div
