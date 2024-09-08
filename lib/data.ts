@@ -76,7 +76,7 @@ export const projectsData = [
       "I'm currently working as the CTO of a start-up company. It's a navigation app designed to make public utility vehicles in the Philippines more accessible.",
     tags: ['Mapbox', 'Android', 'Kotlin', 'Firebase'],
     imageUrl: parapoImg,
-    linkUrl: 'https://youtu.be/5sIx9YhRqPM',
+    linkUrl: 'https://github.com/ColstonBod-oy/para-po',
   },
   {
     title: 'Helpmate',
