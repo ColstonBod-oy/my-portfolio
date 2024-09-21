@@ -47,7 +47,7 @@ export default function About() {
         <span className='underline'>Mobile Development</span>, which became my
         primary area of interest. I am proficient with technologies such as{' '}
         <span className='font-medium'>
-          React, Next.js, React Native, Expo, Firebase, PHP, and Laravel
+          React, Next.js, React Native, Expo, Firebase, and Laravel
         </span>
         . I am currently seeking for an{' '}
         <span className='font-medium'>internship or a full-time position</span>{' '}
