@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className='mb-10 px-4 text-center text-gray-500'>
-      <small className='mb-2 block text-xs'>
-        &copy; 2030 Colston Bod-oy. All rights reserved.
+    <footer className='px-4 mb-10 text-center text-gray-500'>
+      <small className='block mb-2 text-xs'>
+        &copy; 2024 Colston Bod-oy. All rights reserved.
       </small>
       <span className='text-xs'>Credits: </span>
       <a
