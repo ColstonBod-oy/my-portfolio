@@ -36,7 +36,7 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: 'Freelance Web Developer (Remote)',
+    title: 'Freelance Web Developer',
     location: 'Baguio, PH',
     description:
       'I did freelance work and implemented a mobile-first, responsive design for a website using React, React-Bootstrap, and Parcel Bundler, while using Netlify for deployment.',
@@ -44,7 +44,7 @@ export const experiencesData = [
     date: '2020 - 2021',
   },
   {
-    title: 'Web / Mobile Dev Intern (Remote)',
+    title: 'Software Engineer Intern',
     location: 'Makati, PH',
     description:
       'I worked as an intern for a startup e-commerce company that utilized CS-Cart for its development. My role involved being a web developer for the CTA of our online marketplace and launching our mobile app on the Android and iOS app stores.',
@@ -52,10 +52,10 @@ export const experiencesData = [
     date: '2021 - 2022',
   },
   {
-    title: 'Android Mobile Developer (Part-time)',
+    title: 'CTO / Lead Android Developer',
     location: 'Baguio, PH',
     description:
-      "I am currently working part-time as a CTO for one of the startups in our university's incubator program, where I use Mapbox APIs to develop a mobile navigation app. I am open to full-time opportunities.",
+      "I am currently working part-time as the CTO and sole developer for one of the startups in our university's incubator program, where I use Mapbox APIs to develop a mobile navigation app. I am open to full-time opportunities.",
     icon: React.createElement(FaAndroid),
     date: '2023 - present',
   },
