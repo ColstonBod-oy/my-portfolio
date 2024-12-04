@@ -125,6 +125,7 @@ export const skillsData = [
   'React Native',
   'Expo',
   'Next.js',
+  'Tamagui',
   'Framer Motion',
   'Tailwind CSS',
   'SQL',
