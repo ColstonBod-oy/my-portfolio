@@ -49,7 +49,7 @@ export const experiencesData = [
     title: 'Software Engineer Intern',
     location: 'Makati, PH',
     description:
-      'I worked as an intern for a startup e-commerce company that utilized CS-Cart for its development. My role involved being a web developer for the CTA of our online marketplace and launching our mobile app on the Android and iOS app stores.',
+      'I worked as an intern for a startup e-commerce company that utilized CS-Cart for its development. My role involved being a web developer for the CTA of the online marketplace and launching its mobile app on the Android and iOS app stores.',
     icon: React.createElement(FaPhp),
     date: '2021 - 2022',
   },
@@ -57,7 +57,7 @@ export const experiencesData = [
     title: 'CTO / Lead Android Developer',
     location: 'Baguio, PH',
     description:
-      "I worked as the CTO and sole developer for one of the startups in our university's incubator program, where I use Mapbox APIs to develop a mobile navigation app.",
+      "I worked as the CTO and sole developer for one of the startups in my university's incubator program, where I use Mapbox APIs to develop a mobile navigation app.",
     icon: React.createElement(FaAndroid),
     date: '2023 - 2024',
   },
@@ -83,7 +83,7 @@ export const projectsData = [
   {
     title: 'Para Po!',
     description:
-      "I worked as the CTO for one of our university's startup companies. It's a navigation app designed to make PUVs more accessible in the Philippines.",
+      "I worked as the CTO for one of my university's startup companies. It's a navigation app designed to make PUVs more accessible in the Philippines.",
     tags: ['Mapbox', 'Android', 'Kotlin', 'Firebase'],
     imageUrl: parapoImg,
     linkUrl: 'https://github.com/ColstonBod-oy/para-po',
