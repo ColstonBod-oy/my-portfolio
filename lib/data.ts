@@ -2,10 +2,12 @@ import React from 'react';
 import { FaAndroid } from 'react-icons/fa';
 import { FaReact } from 'react-icons/fa';
 import { FaPhp } from 'react-icons/fa';
+import { SiExpo } from 'react-icons/si';
 import poblacionImg from '@/public/poblacion.png';
 import parapoImg from '@/public/parapo.jpg';
 import helpmateImg from '@/public/helpmate.jpg';
 import ctfImg from '@/public/ctf.jpg';
+import wecImg from '@/public/wec.png';
 
 export const links = [
   {
@@ -55,9 +57,17 @@ export const experiencesData = [
     title: 'CTO / Lead Android Developer',
     location: 'Baguio, PH',
     description:
-      "I worked as the CTO and sole developer for one of the startups in our university's incubator program, where I use Mapbox APIs to develop a mobile navigation app. I am open to full-time opportunities.",
+      "I worked as the CTO and sole developer for one of the startups in our university's incubator program, where I use Mapbox APIs to develop a mobile navigation app.",
     icon: React.createElement(FaAndroid),
     date: '2023 - 2024',
+  },
+  {
+    title: 'Software Engineer Intern',
+    location: 'Baguio, PH',
+    description:
+      "I worked for an Outsourcing and Offshoring Consulting Company as part of my university's internship requirement, where I implemented a multi-platform library system using Tamagui. I am open to full-time opportunities.",
+    icon: React.createElement(SiExpo),
+    date: '2024 - 2024',
   },
 ] as const;
 
@@ -94,6 +104,15 @@ export const projectsData = [
     imageUrl: ctfImg,
     linkUrl:
       'https://www.facebook.com/photo/?fbid=490579350209886&set=pcb.490580930209728',
+  },
+  {
+    title: 'Wisdom eBooks Club',
+    description:
+      "I implemented a multi-platform library system for a company as part of my university's internship requirement, using Tamagui + Solito + Next + Expo Monorepo.",
+    tags: ['Tamagui', 'Solito', 'Next', 'Expo'],
+    imageUrl: wecImg,
+    linkUrl:
+      'https://www.canva.com/design/DAGYQNCIYOQ/Yzf2BXna3-oY2QHl9nIB8g/edit?utm_content=DAGYQNCIYOQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
   },
 ] as const;
 
