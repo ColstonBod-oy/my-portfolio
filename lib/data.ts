@@ -65,7 +65,7 @@ export const experiencesData = [
     title: 'Software Engineer Intern',
     location: 'Baguio, PH',
     description:
-      "I worked for an Outsourcing and Offshoring Consulting Company as part of my university's internship requirement, where I implemented a multi-platform library system using Tamagui. I am open to full-time opportunities.",
+      "I worked for an Outsourcing and Offshoring Consulting Company as part of my university's internship requirement, where I developed a multi-platform library system using Tamagui. I am open to full-time opportunities.",
     icon: React.createElement(SiExpo),
     date: '2024 - 2024',
   },
@@ -108,11 +108,11 @@ export const projectsData = [
   {
     title: 'Wisdom eBooks Club',
     description:
-      "I implemented a multi-platform library system for a company as part of my university's internship requirement, using Tamagui + Solito + Next + Expo Monorepo.",
+      "I developed a multi-platform library system for a company as part of my university's internship requirement, using Tamagui + Solito + Next + Expo Monorepo.",
     tags: ['Tamagui', 'Solito', 'Next', 'Expo'],
     imageUrl: wecImg,
     linkUrl:
-      'https://www.canva.com/design/DAGYQNCIYOQ/Yzf2BXna3-oY2QHl9nIB8g/edit?utm_content=DAGYQNCIYOQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
+      'https://www.canva.com/design/DAGYQNCIYOQ/bM96c4apZ6rsvhHkWtRnEQ/view?utm_content=DAGYQNCIYOQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h85b6e34d1f',
   },
 ] as const;
 
