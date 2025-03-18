@@ -31,12 +31,12 @@ export default function About() {
       </div>
       <SectionHeading>About me</SectionHeading>
       <p className='text-justify indent-8'>
-        Hello, I'm Colston. <span className='italic'>A Student</span> 📖 /{' '}
-        <span className='underline'>React & Android Developer 💻</span>. I am
-        currently in my third year of studying Computer Science. My journey as
-        an aspiring developer began at a very young age, during my first year of
-        junior high school, where I learned to write simple scripts using{' '}
-        <span className='font-medium'>Visual Basic</span>.{' '}
+        Hello, I'm Colston.{' '}
+        <span className='italic'>A Computer Science Student</span> 📖 /{' '}
+        <span className='underline'>React & Android Developer 💻</span>. My
+        journey as an aspiring developer began at a very young age, during my
+        first year of junior high school, where I learned to write simple
+        scripts using <span className='font-medium'>Visual Basic</span>.{' '}
         <span className='italic'>In my senior years of high school</span>, I
         started taking programming seriously and became a self-taught Web
         Developer.
