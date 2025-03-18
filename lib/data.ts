@@ -57,7 +57,7 @@ export const experiencesData = [
     title: 'CTO / Lead Android Developer',
     location: 'Baguio, PH',
     description:
-      "I worked as the CTO and sole developer for one of the startups in my university's incubator program, where I use Mapbox APIs to develop a mobile navigation app.",
+      "I led the development of a mobile navigation app as the CTO and sole developer for a startup in my university's incubator program, leveraging Mapbox APIs and SDKs.",
     icon: React.createElement(FaAndroid),
     date: '2023 - 2024',
   },
@@ -83,7 +83,7 @@ export const projectsData = [
   {
     title: 'Para Po!',
     description:
-      "I worked as the CTO for one of my university's startup companies. It's a navigation app designed to make PUVs more accessible in the Philippines.",
+      "Served as the CTO for one of my university's startup companies, developing an app to enhance the accessibility of public utility vehicles in Baguio, Philippines.",
     tags: ['Mapbox', 'Android', 'Kotlin', 'Firebase'],
     imageUrl: parapoImg,
     linkUrl: 'https://github.com/ColstonBod-oy/para-po',
