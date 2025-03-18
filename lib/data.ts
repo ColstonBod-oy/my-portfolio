@@ -62,12 +62,12 @@ export const experiencesData = [
     date: '2023 - 2024',
   },
   {
-    title: 'Software Engineer Intern',
+    title: 'Lead React Native Developer',
     location: 'Baguio, PH',
     description:
-      "I worked for an Outsourcing and Offshoring Consulting Company as part of my university's internship requirement, where I developed a multi-platform library system using Tamagui. I am open to full-time opportunities.",
+      "I worked for an outsourcing and offshoring consulting company as part of my university's internship requirement, where I was later hired as the company's contract-based Lead React Native Developer. I am open to full-time opportunities.",
     icon: React.createElement(SiExpo),
-    date: '2024 - 2024',
+    date: '2024 - Present',
   },
 ] as const;
 
@@ -108,7 +108,7 @@ export const projectsData = [
   {
     title: 'Wisdom eBooks Club',
     description:
-      "I developed a multi-platform library system for a company as part of my university's internship requirement, using Tamagui + Solito + Next + Expo Monorepo.",
+      'I developed a multi-platform library system for an outsourcing and offshoring consulting company, using Tamagui, Solito, Next.js, and Expo in a monorepo architecture.',
     tags: ['Tamagui', 'Solito', 'Next', 'Expo'],
     imageUrl: wecImg,
     linkUrl:
