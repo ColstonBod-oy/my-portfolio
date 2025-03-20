@@ -31,9 +31,9 @@ export default function About() {
       </div>
       <SectionHeading>About me</SectionHeading>
       <p className='text-justify indent-8'>
-        Hello, I'm Colston.{' '}
+        Hello, I'm Colston 👋.{' '}
         <span className='italic'>A Computer Science Student</span> 📖 /{' '}
-        <span className='underline'>React & Android Developer 💻</span>. My
+        <span className='underline'>React & Android Developer</span> 👨‍💻. My
         journey as an aspiring developer began at a very young age, during my
         first year of junior high school, where I learned to write simple
         scripts using <span className='font-medium'>Visual Basic</span>.{' '}
@@ -43,9 +43,9 @@ export default function About() {
       </p>
 
       <p className='mb-3 text-justify indent-8'>
-        I also tried Game Development, but eventually, I discovered{' '}
-        <span className='underline'>Mobile Development</span>, which became my
-        primary area of interest. I am proficient with technologies such as{' '}
+        I also tried Game Development, but eventually, I got really into
+        creating mobile apps, which became my primary area of expertise. I am
+        proficient with technologies such as{' '}
         <span className='font-medium'>
           React, Next.js, React Native, Expo, Firebase, and Laravel
         </span>
