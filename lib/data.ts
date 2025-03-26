@@ -8,6 +8,8 @@ import parapoImg from '@/public/parapo.jpg';
 import helpmateImg from '@/public/helpmate.jpg';
 import ctfImg from '@/public/ctf.jpg';
 import wecImg from '@/public/wec.png';
+import routeImg from '@/public/route-generator.png';
+import korgeeImg from '@/public/korgee.png';
 
 export const links = [
   {
@@ -87,6 +89,22 @@ export const projectsData = [
     tags: ['Mapbox', 'Android', 'Kotlin', 'Firebase'],
     imageUrl: parapoImg,
     linkUrl: 'https://github.com/ColstonBod-oy/para-po',
+  },
+  {
+    title: 'Map Route Generator',
+    description:
+      'I created this online tool for our startup, Para Po!, to generate clean paths and display directions for custom routes using the Mapbox Map Matching API.',
+    tags: ['Mapbox GL', 'JavaScript', 'Routing', 'Directions'],
+    imageUrl: routeImg,
+    linkUrl: 'https://colstonbod-oy.github.io/para-po-route-generator/',
+  },
+  {
+    title: 'Korgee',
+    description:
+      'This is a 2D platformer game template that I built using the KorGe game engine, with Gradle and Kotlin DSL.',
+    tags: ['KorGe', 'Kotlin', 'Aseprite', 'LDtk'],
+    imageUrl: korgeeImg,
+    linkUrl: 'https://github.com/ColstonBod-oy/korgee',
   },
   {
     title: 'Helpmate',
