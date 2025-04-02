@@ -59,7 +59,7 @@ export const experiencesData = [
     title: 'CTO / Lead Android Developer',
     location: 'Baguio, PH',
     description:
-      "I led the development of a mobile navigation app as the CTO and sole developer for a startup in my university's incubator program, leveraging Mapbox APIs and SDKs.",
+      "I led the development of a mobile navigation app as the CTO for a startup in my university's incubator program, leveraging Mapbox APIs and SDKs.",
     icon: React.createElement(FaAndroid),
     date: '2023 - 2024',
   },
