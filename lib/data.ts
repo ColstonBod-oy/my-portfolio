@@ -126,11 +126,11 @@ export const projectsData = [
   {
     title: 'Wisdom eBooks Club',
     description:
-      'I developed a multi-platform library system for an outsourcing and offshoring consulting company, using Tamagui, Solito, Next.js, and Expo in a monorepo architecture.',
+      'I developed and deployed a multi-platform digital library system for an offshoring consulting company, using Tamagui, Solito, Next.js, and Expo in a monorepo architecture.',
     tags: ['Tamagui', 'Solito', 'Next', 'Expo'],
     imageUrl: wecImg,
     linkUrl:
-      'https://www.canva.com/design/DAGYQNCIYOQ/bM96c4apZ6rsvhHkWtRnEQ/view?utm_content=DAGYQNCIYOQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h85b6e34d1f',
+      'https://www.canva.com/design/DAGnk3ZYaRk/Jqj0IoLw6glaJUb47pwjaA/view?utm_content=DAGnk3ZYaRk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hbea13f1a11',
   },
 ] as const;
 
