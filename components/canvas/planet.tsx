@@ -22,7 +22,7 @@ const Planet = () => {
       planet.scene.remove(ambientLight);
       planet.scene.remove(directionalLight);
     };
-  }, [planet.scene]);
+  }, []);
 
   return (
     <primitive
