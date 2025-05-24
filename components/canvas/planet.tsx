@@ -1,4 +1,4 @@
-import React, { Suspense, useCallback, useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useRef, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
@@ -36,12 +36,17 @@ const Planet = () => {
 
 const PlanetCanvas = () => {
   const [canvasKey, setCanvasKey] = useState(0);
+  const glRef = useRef<THREE.WebGLRenderer | null>(null);
 
-  // Handle context loss and restoration when scrolling
-  const handleContext = useCallback((gl: THREE.WebGLRenderer) => {
+  useEffect(() => {
+    if (!glRef.current) return;
+
+    const gl = glRef.current;
+
+    // Handle context loss and restoration when scrolling
     const handleContextLost = (e: Event) => {
       e.preventDefault();
-      setCanvasKey((prev) => prev + 1); // Remount Planet
+      setCanvasKey((prev) => prev + 1);
     };
 
     gl.domElement.addEventListener('webglcontextlost', handleContextLost);
@@ -49,7 +54,7 @@ const PlanetCanvas = () => {
     return () => {
       gl.domElement.removeEventListener('webglcontextlost', handleContextLost);
     };
-  }, []);
+  }, [canvasKey]);
 
   return (
     <Canvas
@@ -64,12 +69,15 @@ const PlanetCanvas = () => {
         far: 200,
         position: [-4, 3, 6],
       }}
-      onCreated={({ gl }) => handleContext(gl)}
+      onCreated={({ gl }) => {
+        glRef.current = gl;
+      }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           autoRotate
           enableZoom={false}
+          enablePan={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
