@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect } from 'react';
-import { Canvas } from '@react-three/fiber';
+import { Canvas, useThree } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 
@@ -7,6 +7,7 @@ import CanvasLoader from '../loader';
 
 const Planet = () => {
   const planet = useGLTF('./planet/scene.gltf');
+  const { gl, camera } = useThree();
 
   useEffect(() => {
     const ambientLight = new THREE.AmbientLight(0xcccccc, 0.5);
@@ -18,11 +19,34 @@ const Planet = () => {
     planet.scene.add(ambientLight);
     planet.scene.add(directionalLight);
 
+    // Add context loss handling when scrolling
+    const handleContextLost = (event: Event) => {
+      event.preventDefault();
+      console.log('WebGL Context Lost');
+    };
+
+    const handleContextRestored = () => {
+      console.log('WebGL Context Restored');
+      // Force a re-render of the scene
+      gl.render(planet.scene, camera);
+    };
+
+    gl.domElement.addEventListener('webglcontextlost', handleContextLost);
+    gl.domElement.addEventListener(
+      'webglcontextrestored',
+      handleContextRestored
+    );
+
     return () => {
       planet.scene.remove(ambientLight);
       planet.scene.remove(directionalLight);
+      gl.domElement.removeEventListener('webglcontextlost', handleContextLost);
+      gl.domElement.removeEventListener(
+        'webglcontextrestored',
+        handleContextRestored
+      );
     };
-  }, []);
+  }, [planet, gl, camera]);
 
   return (
     <primitive
