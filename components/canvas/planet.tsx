@@ -5,7 +5,7 @@ import * as THREE from 'three';
 
 import CanvasLoader from '../loader';
 
-const Planet = ({ keyProp }: { keyProp: number }) => {
+const Planet = () => {
   const planet = useGLTF('./planet/scene.gltf');
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const Planet = ({ keyProp }: { keyProp: number }) => {
       planet.scene.remove(ambientLight);
       planet.scene.remove(directionalLight);
     };
-  }, [planet.scene]);
+  }, [planet]);
 
   return (
     <primitive
@@ -35,13 +35,13 @@ const Planet = ({ keyProp }: { keyProp: number }) => {
 };
 
 const PlanetCanvas = () => {
-  const [planetKey, setPlanetKey] = useState(0);
+  const [canvasKey, setCanvasKey] = useState(0);
 
   // Handle context loss and restoration when scrolling
   const handleContext = useCallback((gl: THREE.WebGLRenderer) => {
     const handleContextLost = (e: Event) => {
       e.preventDefault();
-      setPlanetKey((prev) => prev + 1); // Remount Planet
+      setCanvasKey((prev) => prev + 1); // Remount Planet
     };
 
     gl.domElement.addEventListener('webglcontextlost', handleContextLost);
@@ -53,6 +53,7 @@ const PlanetCanvas = () => {
 
   return (
     <Canvas
+      key={canvasKey}
       shadows
       frameloop='always'
       dpr={[1, 2]}
@@ -72,7 +73,7 @@ const PlanetCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Planet keyProp={planetKey} />
+        <Planet />
 
         <Preload all />
       </Suspense>
