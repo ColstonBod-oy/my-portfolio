@@ -5,7 +5,7 @@ import * as THREE from 'three';
 
 import CanvasLoader from '../loader';
 
-const Planet = () => {
+const Planet = ({ keyProp }: { keyProp: number }) => {
   const planet = useGLTF('./planet/scene.gltf');
 
   useEffect(() => {
@@ -35,23 +35,42 @@ const Planet = () => {
 };
 
 const PlanetCanvas = () => {
-  const [reloadKey, setReloadKey] = useState(0);
+  const [planetKey, setPlanetKey] = useState(0);
 
   // Handle context loss and restoration when scrolling
-  const handleContext = useCallback((gl: THREE.WebGLRenderer) => {
-    gl.domElement.addEventListener('webglcontextlost', (e) => {
-      e.preventDefault();
-      setReloadKey((prev) => prev + 1);
-    });
+  const handleContext = useCallback(
+    (gl: THREE.WebGLRenderer, scene: THREE.Scene, camera: THREE.Camera) => {
+      const handleContextLost = (e: Event) => {
+        e.preventDefault();
+        setPlanetKey((prev) => prev + 1); // Remount Planet
+      };
 
-    gl.domElement.addEventListener('webglcontextrestored', () => {
-      setReloadKey((prev) => prev + 1);
-    });
-  }, []);
+      const handleContextRestored = () => {
+        gl.render(scene, camera);
+      };
+
+      gl.domElement.addEventListener('webglcontextlost', handleContextLost);
+      gl.domElement.addEventListener(
+        'webglcontextrestored',
+        handleContextRestored
+      );
+
+      return () => {
+        gl.domElement.removeEventListener(
+          'webglcontextlost',
+          handleContextLost
+        );
+        gl.domElement.removeEventListener(
+          'webglcontextrestored',
+          handleContextRestored
+        );
+      };
+    },
+    []
+  );
 
   return (
     <Canvas
-      key={reloadKey}
       shadows
       frameloop='always'
       dpr={[1, 2]}
@@ -62,7 +81,7 @@ const PlanetCanvas = () => {
         far: 200,
         position: [-4, 3, 6],
       }}
-      onCreated={({ gl }) => handleContext(gl)}
+      onCreated={({ gl, scene, camera }) => handleContext(gl, scene, camera)}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
@@ -71,7 +90,7 @@ const PlanetCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Planet />
+        <Planet keyProp={planetKey} />
 
         <Preload all />
       </Suspense>
