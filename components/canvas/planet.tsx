@@ -38,36 +38,18 @@ const PlanetCanvas = () => {
   const [planetKey, setPlanetKey] = useState(0);
 
   // Handle context loss and restoration when scrolling
-  const handleContext = useCallback(
-    (gl: THREE.WebGLRenderer, scene: THREE.Scene, camera: THREE.Camera) => {
-      const handleContextLost = (e: Event) => {
-        e.preventDefault();
-        setPlanetKey((prev) => prev + 1); // Remount Planet
-      };
+  const handleContext = useCallback((gl: THREE.WebGLRenderer) => {
+    const handleContextLost = (e: Event) => {
+      e.preventDefault();
+      setPlanetKey((prev) => prev + 1); // Remount Planet
+    };
 
-      const handleContextRestored = () => {
-        gl.render(scene, camera);
-      };
+    gl.domElement.addEventListener('webglcontextlost', handleContextLost);
 
-      gl.domElement.addEventListener('webglcontextlost', handleContextLost);
-      gl.domElement.addEventListener(
-        'webglcontextrestored',
-        handleContextRestored
-      );
-
-      return () => {
-        gl.domElement.removeEventListener(
-          'webglcontextlost',
-          handleContextLost
-        );
-        gl.domElement.removeEventListener(
-          'webglcontextrestored',
-          handleContextRestored
-        );
-      };
-    },
-    []
-  );
+    return () => {
+      gl.domElement.removeEventListener('webglcontextlost', handleContextLost);
+    };
+  }, []);
 
   return (
     <Canvas
@@ -81,7 +63,7 @@ const PlanetCanvas = () => {
         far: 200,
         position: [-4, 3, 6],
       }}
-      onCreated={({ gl, scene, camera }) => handleContext(gl, scene, camera)}
+      onCreated={({ gl }) => handleContext(gl)}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
