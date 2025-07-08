@@ -75,12 +75,12 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: 'Poblacion.ph',
+    title: 'Wisdom eBooks Club',
     description:
-      "I worked as a web and mobile dev intern on this startup project for 9 months. It's an e-commerce platform for local businesses in the Philippines.",
-    tags: ['CS-Cart', 'JavaScript', 'PHP', 'React Native'],
-    imageUrl: poblacionImg,
-    linkUrl: 'https://youtu.be/FyKWEZ_4oYM?t=1115',
+      'I developed and deployed a multi-platform digital library system for an offshoring consulting company, using Tamagui, Solito, Next.js, and Expo in a monorepo architecture.',
+    tags: ['Tamagui', 'Solito', 'Next', 'Expo'],
+    imageUrl: wecImg,
+    linkUrl: 'https://app.wisdomebooksclub.com',
   },
   {
     title: 'Para Po!',
@@ -89,6 +89,23 @@ export const projectsData = [
     tags: ['Mapbox', 'Android', 'Kotlin', 'Firebase'],
     imageUrl: parapoImg,
     linkUrl: 'https://github.com/ColstonBod-oy/para-po',
+  },
+  {
+    title: 'Poblacion.ph',
+    description:
+      "I worked as a web and mobile dev intern on this startup project for 9 months. It's an e-commerce platform for local businesses in the Philippines.",
+    tags: ['CS-Cart', 'JavaScript', 'PHP', 'React Native'],
+    imageUrl: poblacionImg,
+    linkUrl: 'https://youtu.be/FyKWEZ_4oYM?t=1115',
+  },
+  {
+    title: 'Hack4Gov 2024',
+    description:
+      'I participated in Hack4Gov 2024, my first CTF challenge, where our team finished as the 3rd runner-up. The challenge was in Jeopardy-style format.',
+    tags: ['Web Exploitation', 'NetSec', 'Cryptography', 'Forensics'],
+    imageUrl: ctfImg,
+    linkUrl:
+      'https://www.facebook.com/photo/?fbid=490579350209886&set=pcb.490580930209728',
   },
   {
     title: 'Map Route Generator',
@@ -113,23 +130,6 @@ export const projectsData = [
     tags: ['Nearby Connections API', 'Android', 'Java', 'Material UI'],
     imageUrl: helpmateImg,
     linkUrl: 'https://github.com/ColstonBod-oy/helpmate',
-  },
-  {
-    title: 'Hack4Gov 2024',
-    description:
-      'I participated in Hack4Gov 2024, my first CTF challenge, where our team finished as the 3rd runner-up. The challenge was in Jeopardy-style format.',
-    tags: ['Web Exploitation', 'NetSec', 'Cryptography', 'Forensics'],
-    imageUrl: ctfImg,
-    linkUrl:
-      'https://www.facebook.com/photo/?fbid=490579350209886&set=pcb.490580930209728',
-  },
-  {
-    title: 'Wisdom eBooks Club',
-    description:
-      'I developed and deployed a multi-platform digital library system for an offshoring consulting company, using Tamagui, Solito, Next.js, and Expo in a monorepo architecture.',
-    tags: ['Tamagui', 'Solito', 'Next', 'Expo'],
-    imageUrl: wecImg,
-    linkUrl: 'https://app.wisdomebooksclub.com',
   },
 ] as const;
 
