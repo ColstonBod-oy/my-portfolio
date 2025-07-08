@@ -129,8 +129,7 @@ export const projectsData = [
       'I developed and deployed a multi-platform digital library system for an offshoring consulting company, using Tamagui, Solito, Next.js, and Expo in a monorepo architecture.',
     tags: ['Tamagui', 'Solito', 'Next', 'Expo'],
     imageUrl: wecImg,
-    linkUrl:
-      'https://www.canva.com/design/DAGnk3ZYaRk/Jqj0IoLw6glaJUb47pwjaA/view?utm_content=DAGnk3ZYaRk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hbea13f1a11',
+    linkUrl: 'https://app.wisdomebooksclub.com',
   },
 ] as const;
 
