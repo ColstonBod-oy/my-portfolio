@@ -49,9 +49,8 @@ export default function About() {
         <span className='font-medium'>
           React, Next.js, React Native, Expo, Firebase, and Laravel
         </span>
-        . I am currently seeking for an{' '}
-        <span className='font-medium'>internship or a full-time position</span>{' '}
-        as a Web or Mobile Developer.
+        . I am currently seeking for{' '}
+        <span className='font-medium'>internships or full-time positions</span>.
       </p>
 
       <p className='text-justify indent-8'>

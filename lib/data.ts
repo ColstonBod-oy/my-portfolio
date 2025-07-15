@@ -67,9 +67,9 @@ export const experiencesData = [
     title: 'Lead React Native Developer',
     location: 'Baguio, PH',
     description:
-      "I worked for an outsourcing and offshoring consulting company as part of my university's internship requirement, where I was later promoted as the company's contract-based Lead React Native Developer. I am open to full-time opportunities.",
+      'I served as a contract-based Lead React Native Developer, where I successfully built and deployed a multi-platform digital library project for both web and mobile using Vercel and Expo EAS. I am now seeking for new opportunities.',
     icon: React.createElement(SiExpo),
-    date: '2024 - Present',
+    date: '2024 - 2025',
   },
 ] as const;
 
