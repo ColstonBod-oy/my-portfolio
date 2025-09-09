@@ -19,8 +19,23 @@ const Planet = () => {
     planet.scene.add(directionalLight);
 
     return () => {
+      // Clean up lights
       planet.scene.remove(ambientLight);
       planet.scene.remove(directionalLight);
+
+      // Dispose of geometries and materials
+      planet.scenes.forEach((scene) => {
+        scene.traverse((object) => {
+          if (object instanceof THREE.Mesh) {
+            object.geometry.dispose();
+            if (object.material instanceof THREE.Material) {
+              object.material.dispose();
+            } else if (Array.isArray(object.material)) {
+              object.material.forEach((material) => material.dispose());
+            }
+          }
+        });
+      });
     };
   }, [planet]);
 
@@ -37,22 +52,47 @@ const Planet = () => {
 const PlanetCanvas = () => {
   const [canvasKey, setCanvasKey] = useState(0);
   const glRef = useRef<THREE.WebGLRenderer | null>(null);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     if (!glRef.current) return;
 
     const gl = glRef.current;
 
-    // Handle context loss and restoration when scrolling
+    // Handle context loss
     const handleContextLost = (e: Event) => {
       e.preventDefault();
       setCanvasKey((prev) => prev + 1);
     };
 
+    // Handle visibility change
+    const handleVisibilityChange = () => {
+      setIsVisible(!document.hidden);
+    };
+
+    // Use Intersection Observer to detect when canvas is in/out of view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsVisible(entry.isIntersecting);
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(gl.domElement);
+
     gl.domElement.addEventListener('webglcontextlost', handleContextLost);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
 
     return () => {
       gl.domElement.removeEventListener('webglcontextlost', handleContextLost);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      observer.disconnect();
+
+      // Properly dispose of resources
+      gl.dispose();
+      gl.forceContextLoss();
     };
   }, [canvasKey]);
 
@@ -60,9 +100,14 @@ const PlanetCanvas = () => {
     <Canvas
       key={canvasKey}
       shadows
-      frameloop='always'
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
+      frameloop={isVisible ? 'always' : 'never'}
+      dpr={[1, 1.5]}
+      gl={{
+        preserveDrawingBuffer: true,
+        powerPreference: 'high-performance',
+        antialias: false,
+        alpha: true,
+      }}
       camera={{
         fov: 45,
         near: 0.1,
