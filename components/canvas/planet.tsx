@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useRef, useState } from 'react';
+import React, { Suspense, useEffect, useRef } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
@@ -7,6 +7,7 @@ import CanvasLoader from '../loader';
 
 const Planet = () => {
   const planet = useGLTF('./planet/scene.gltf');
+  const planetRef = useRef<THREE.Group>(null);
 
   useEffect(() => {
     const ambientLight = new THREE.AmbientLight(0xcccccc, 0.5);
@@ -14,33 +15,26 @@ const Planet = () => {
 
     // Set to top left
     directionalLight.position.set(-10, 10, 10);
+    directionalLight.castShadow = true;
+
+    // Optimize shadow map
+    directionalLight.shadow.mapSize.width = 512;
+    directionalLight.shadow.mapSize.height = 512;
+    directionalLight.shadow.camera.near = 0.5;
+    directionalLight.shadow.camera.far = 500;
 
     planet.scene.add(ambientLight);
     planet.scene.add(directionalLight);
 
     return () => {
-      // Clean up lights
       planet.scene.remove(ambientLight);
       planet.scene.remove(directionalLight);
-
-      // Dispose of geometries and materials
-      planet.scenes.forEach((scene) => {
-        scene.traverse((object) => {
-          if (object instanceof THREE.Mesh) {
-            object.geometry.dispose();
-            if (object.material instanceof THREE.Material) {
-              object.material.dispose();
-            } else if (Array.isArray(object.material)) {
-              object.material.forEach((material) => material.dispose());
-            }
-          }
-        });
-      });
     };
   }, [planet]);
 
   return (
     <primitive
+      ref={planetRef}
       object={planet.scene}
       scale={0.36}
       position-y={-0.5}
@@ -50,63 +44,56 @@ const Planet = () => {
 };
 
 const PlanetCanvas = () => {
-  const [canvasKey, setCanvasKey] = useState(0);
   const glRef = useRef<THREE.WebGLRenderer | null>(null);
-  const [isVisible, setIsVisible] = useState(true);
+  const planetRef = useRef<THREE.Group | null>(null);
 
   useEffect(() => {
     if (!glRef.current) return;
 
     const gl = glRef.current;
 
-    // Handle context loss
+    // Handle context loss and restoration
     const handleContextLost = (e: Event) => {
       e.preventDefault();
-      setCanvasKey((prev) => prev + 1);
+      if (planetRef.current) {
+        planetRef.current.visible = false;
+      }
     };
 
-    // Handle visibility change
-    const handleVisibilityChange = () => {
-      setIsVisible(!document.hidden);
+    const handleContextRestored = () => {
+      if (planetRef.current) {
+        planetRef.current.visible = true;
+      }
     };
-
-    // Use Intersection Observer to detect when canvas is in/out of view
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          setIsVisible(entry.isIntersecting);
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    observer.observe(gl.domElement);
 
     gl.domElement.addEventListener('webglcontextlost', handleContextLost);
-    document.addEventListener('visibilitychange', handleVisibilityChange);
+    gl.domElement.addEventListener(
+      'webglcontextrestored',
+      handleContextRestored
+    );
 
     return () => {
       gl.domElement.removeEventListener('webglcontextlost', handleContextLost);
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-      observer.disconnect();
-
-      // Properly dispose of resources
-      gl.dispose();
-      gl.forceContextLoss();
+      gl.domElement.removeEventListener(
+        'webglcontextrestored',
+        handleContextRestored
+      );
     };
-  }, [canvasKey]);
+  }, []);
 
   return (
     <Canvas
-      key={canvasKey}
       shadows
-      frameloop={isVisible ? 'always' : 'never'}
-      dpr={[1, 1.5]}
+      frameloop='always'
+      dpr={[1, 2]}
       gl={{
         preserveDrawingBuffer: true,
         powerPreference: 'high-performance',
-        antialias: false,
+        antialias: true,
         alpha: true,
+        stencil: false,
+        depth: true,
+        failIfMajorPerformanceCaveat: false,
       }}
       camera={{
         fov: 45,
