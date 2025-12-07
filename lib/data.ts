@@ -158,6 +158,7 @@ export const skillsData = [
   'Typescript',
   'React',
   'React Native',
+  'Flutter',
   'Expo',
   'Next.js',
   'Tamagui',

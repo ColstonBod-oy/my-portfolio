@@ -47,10 +47,10 @@ export default function About() {
         creating mobile apps, which became my primary area of expertise. I am
         proficient with technologies such as{' '}
         <span className='font-medium'>
-          React, Next.js, React Native, Expo, Firebase, and Laravel
+          React, Next.js, React Native, Expo, Flutter, Firebase, and Laravel
         </span>
-        . I am currently seeking for{' '}
-        <span className='font-medium'>internships or full-time positions</span>.
+        . I am still currently exploring for{' '}
+        <span className='font-medium'>new opportunities</span>.
       </p>
 
       <p className='text-justify indent-8'>
