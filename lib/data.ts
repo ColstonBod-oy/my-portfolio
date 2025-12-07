@@ -3,11 +3,13 @@ import { FaAndroid } from 'react-icons/fa';
 import { FaReact } from 'react-icons/fa';
 import { FaPhp } from 'react-icons/fa';
 import { SiExpo } from 'react-icons/si';
+import { SiFlutter } from 'react-icons/si';
 import poblacionImg from '@/public/poblacion.png';
 import parapoImg from '@/public/parapo.jpg';
 import helpmateImg from '@/public/helpmate.jpg';
 import ctfImg from '@/public/ctf.jpg';
 import wecImg from '@/public/wec.png';
+import tmsImg from '@/public/tms.png';
 import routeImg from '@/public/route-generator.png';
 import korgeeImg from '@/public/korgee.png';
 
@@ -56,7 +58,7 @@ export const experiencesData = [
     date: '2021 - 2022',
   },
   {
-    title: 'CTO / Lead Android Developer',
+    title: 'CTO & Lead Android Developer',
     location: 'Baguio, PH',
     description:
       "I led the development of a mobile navigation app as the CTO for a startup in my university's incubator program, leveraging Mapbox APIs and SDKs.",
@@ -67,25 +69,41 @@ export const experiencesData = [
     title: 'Lead React Native Developer',
     location: 'Baguio, PH',
     description:
-      'I served as a contract-based Lead React Native Developer, where I successfully built and deployed a multi-platform digital library project for both web and mobile using Vercel and Expo EAS. I am now seeking for new opportunities.',
+      'I served as a contract-based Lead React Native Developer, where I successfully built and deployed a multi-platform digital library project for both web and mobile using Vercel and Expo EAS.',
     icon: React.createElement(SiExpo),
     date: '2024 - 2025',
+  },
+  {
+    title: 'QA & Junior Developer',
+    location: 'Duluth, GA, US',
+    description:
+      'Performed quality assurance for the mobile and web applications of a Transport Management System (TMS), maintaining code quality, fixing bugs, and assisting the development team in implementing updates and new features using Flutter and PHP MySQL.',
+    icon: React.createElement(SiFlutter),
+    date: '2025 - Present',
   },
 ] as const;
 
 export const projectsData = [
+  {
+    title: 'Asset Nexus TMS',
+    description:
+      'I helped develop and perform quality assurance for a Transport Management System (TMS), and implemented API integrations with Motive and Samsara.',
+    tags: ['Flutter', 'MySQL', 'Motive', 'Samsara'],
+    imageUrl: tmsImg,
+    linkUrl: 'https://www.assettransportgroup.com.au',
+  },
   {
     title: 'Wisdom eBooks Club',
     description:
       'I developed and deployed a multi-platform digital library system for an offshoring consulting company, using Tamagui, Solito, Next.js, and Expo in a monorepo architecture.',
     tags: ['Tamagui', 'Solito', 'Next', 'Expo'],
     imageUrl: wecImg,
-    linkUrl: 'https://app.wisdomebooksclub.com',
+    linkUrl: 'https://play.google.com/store/apps/details?id=com.wecnative.app',
   },
   {
     title: 'Para Po!',
     description:
-      "Served as the CTO for one of my university's startup companies, developing an app to enhance the accessibility of public utility vehicles in Baguio, Philippines.",
+      "I served as the CTO for one of my university's startup companies, developing an app to enhance the accessibility of public utility vehicles in Baguio, Philippines.",
     tags: ['Mapbox', 'Android', 'Kotlin', 'Firebase'],
     imageUrl: parapoImg,
     linkUrl: 'https://github.com/ColstonBod-oy/para-po',

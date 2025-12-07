@@ -55,9 +55,9 @@ export default function About() {
 
       <p className='text-justify indent-8'>
         <span className='italic'>When I'm not coding</span>, I enjoy playing
-        video games, watching movies, and going out for long walks. I also enjoy{' '}
-        <span className='font-medium'>learning new things</span>. I am currently
-        learning about{' '}
+        video games, watching movies, going out for long walks, and traveling. I
+        also enjoy <span className='font-medium'>learning new things</span>. I
+        am currently learning about{' '}
         <span className='font-medium'>
           Machine Learning, Data Science, and Cybersecurity
         </span>{' '}
