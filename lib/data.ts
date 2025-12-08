@@ -77,7 +77,7 @@ export const experiencesData = [
     title: 'QA & Junior Developer',
     location: 'Duluth, GA, US',
     description:
-      'Performed quality assurance for the mobile and web applications of a Transport Management System (TMS), maintaining code quality, fixing bugs, and assisting the development team in implementing updates and new features using Flutter and PHP MySQL.',
+      'Performed quality assurance for the mobile and web applications of a Transport Management System (TMS), maintaining code quality, fixing bugs, and assisting the development team in implementing new features and integrating Motive and Samsara APIs for fleet monitoring.',
     icon: React.createElement(SiFlutter),
     date: '2025 - Present',
   },
@@ -87,7 +87,7 @@ export const projectsData = [
   {
     title: 'Asset Nexus TMS',
     description:
-      'I helped develop and perform quality assurance for a Transport Management System (TMS), and implemented API integrations with Motive and Samsara.',
+      'I helped develop and perform quality assurance for a Transport Management System (TMS) and implemented API integrations with Motive and Samsara.',
     tags: ['Flutter', 'MySQL', 'Motive', 'Samsara'],
     imageUrl: tmsImg,
     linkUrl: 'https://www.assettransportgroup.com.au',
