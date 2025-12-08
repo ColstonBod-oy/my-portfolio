@@ -77,7 +77,7 @@ export const experiencesData = [
     title: 'QA & Junior Developer',
     location: 'Duluth, GA, US',
     description:
-      'Performed quality assurance for the mobile and web applications of a Transport Management System (TMS), maintaining code quality, fixing bugs, and assisting the development team in implementing new features and integrating Motive and Samsara APIs for fleet monitoring.',
+      'I performed quality assurance for the mobile and web applications of a Transport Management System (TMS), maintaining code quality, fixing bugs, and assisting the development team in implementing new features and integrating Motive and Samsara APIs for fleet monitoring.',
     icon: React.createElement(SiFlutter),
     date: '2025 - Present',
   },
@@ -103,7 +103,7 @@ export const projectsData = [
   {
     title: 'Para Po!',
     description:
-      "I served as the CTO for one of my university's startup companies, developing an app to enhance the accessibility of public utility vehicles in Baguio, Philippines.",
+      'I served as the CTO for one of my university’s startups, which developed an app to enhance the accessibility of public utility vehicles in Baguio, Philippines.',
     tags: ['Mapbox', 'Android', 'Kotlin', 'Firebase'],
     imageUrl: parapoImg,
     linkUrl: 'https://github.com/ColstonBod-oy/para-po',
@@ -158,13 +158,14 @@ export const skillsData = [
   'Typescript',
   'React',
   'React Native',
+  'Dart',
   'Flutter',
   'Expo',
   'Next.js',
   'Tamagui',
   'Framer Motion',
   'Tailwind CSS',
-  'SQL',
+  'MySQL',
   'PHP',
   'Laravel',
   'Firebase',
