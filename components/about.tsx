@@ -32,8 +32,7 @@ export default function About() {
       <SectionHeading>About me</SectionHeading>
       <p className='text-justify indent-8'>
         Hello, I'm Colston 👋.{' '}
-        <span className='italic'>A Computer Science Student</span> 📖 /{' '}
-        <span className='underline'>React & Android Developer</span> 👨‍💻. My
+        <span className='underline'>A Web & Mobile Developer</span> 👨‍💻. My
         journey as an aspiring developer began at a very young age, during my
         first year of junior high school, where I learned to write simple
         scripts using <span className='font-medium'>Visual Basic</span>.{' '}

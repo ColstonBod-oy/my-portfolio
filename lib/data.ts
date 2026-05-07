@@ -79,7 +79,7 @@ export const experiencesData = [
     description:
       'I performed quality assurance for the mobile and web applications of a Transport Management System (TMS), maintaining code quality, fixing bugs, and assisting the development team in implementing new features and integrating Motive and Samsara APIs for fleet monitoring.',
     icon: React.createElement(SiFlutter),
-    date: '2025 - Present',
+    date: '2025 - 2026',
   },
 ] as const;
 
